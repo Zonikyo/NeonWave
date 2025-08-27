@@ -14,5 +14,5 @@ The proxy is hosted using Cloudflare workers, which is a service usually not blo
 
 #### Expected Release
 Currently, as you could have noticed by now, 'NeonWave' seems to not exist... which you are half correct, it has not been released to the public yet, as there are still some more logistics that need to be sorted out before we can go live.
-Because of this, there are 0 ways to donate, 0 ways to see beta versions and 0 ways to sponsor the project for now.
+Because of this, there are 0 ways to donate, 0 ways to see beta versions and 0 ways to sponsor the project for now. NeonWave is expected to release by October 2025, likely far, far earlier.
 </div>
