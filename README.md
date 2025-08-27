@@ -11,4 +11,8 @@
 The games are drawn from a JSON file, this JSON file includes the Game name, URL, thumbnail, description and categories that it falls under.
 The games are then displayed on the homepage and sidebar. When you click on one of the games it opens a game player, which is just an iframe usually connected through a Proxy server to not only increase security in some ways, but also 'dodge' the domain blocks that many schools and workplaces use to restrict content.
 The proxy is hosted using Cloudflare workers, which is a service usually not blocked by schools due to the amount of actually educational websites.
+
+#### Expected Release
+Currently, as you could have noticed by now, 'NeonWave' seems to not exist... which you are half correct, it has not been released to the public yet, as there are still some more logistics that need to be sorted out before we can go live.
+Because of this, there are 0 ways to donate, 0 ways to see beta versions and 0 ways to sponsor the project for now.
 </div>
