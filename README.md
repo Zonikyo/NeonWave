@@ -1,5 +1,6 @@
 <div align="center">
-<img width="707" height="353" alt="The_worlds_most_advanced_unblocked_games_website-removebg-preview" src="https://github.com/user-attachments/assets/b838bf40-ebba-490d-bfd7-dfee831437da" />
+<img width="707" height="353" alt="The_worlds_most_advanced_unblocked_games_website__1_-removebg-preview" src="https://github.com/user-attachments/assets/0aeebfff-fd11-4366-ad35-44e1e4dab410" />
+
 
 ### The source code for the official <a href="https://neonwave.netlify.app">NeonWave</a> Unblocked Games website
 ---
