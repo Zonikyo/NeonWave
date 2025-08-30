@@ -5,7 +5,7 @@
     "description": "Build, explore, and survive in the classic Minecraft experience. Create your own world with blocks and let your imagination run wild.",
     "category": "Adventure",
     "tags": ["minecraft", "building", "sandbox", "creative"],
-    "thumbnail": "https://via.placeholder.com/300x200/00ffff/000000?text=Minecraft+Classic",
+    "thumbnail": "https://via.placeholder.com/300x200/667eea/ffffff?text=Minecraft+Classic",
     "embedUrl": "https://www.minecraft.net/en-us/classic"
   },
   {
@@ -14,7 +14,7 @@
     "description": "Slide tiles, combine numbers, and reach the 2048 tile in this addictive puzzle game. Test your strategic thinking and planning skills.",
     "category": "Puzzle",
     "tags": ["puzzle", "numbers", "strategy", "brain"],
-    "thumbnail": "https://via.placeholder.com/300x200/0080ff/000000?text=2048",
+    "thumbnail": "https://via.placeholder.com/300x200/764ba2/ffffff?text=2048",
     "embedUrl": "https://play2048.co/"
   },
   {
@@ -23,7 +23,7 @@
     "description": "Grow your snake by eating glowing orbs and other players. Become the longest snake on the server in this multiplayer snake game.",
     "category": "Arcade",
     "tags": ["snake", "multiplayer", "arcade", "competitive"],
-    "thumbnail": "https://via.placeholder.com/300x200/00ffff/000000?text=Slither.io",
+    "thumbnail": "https://via.placeholder.com/300x200/f093fb/ffffff?text=Slither.io",
     "embedUrl": "https://slither.io/"
   },
   {
@@ -32,7 +32,7 @@
     "description": "Run, jump, and slide through ancient temples while collecting coins and avoiding obstacles. How far can you run?",
     "category": "Action",
     "tags": ["running", "adventure", "action", "endless"],
-    "thumbnail": "https://via.placeholder.com/300x200/0080ff/000000?text=Temple+Run+2",
+    "thumbnail": "https://via.placeholder.com/300x200/667eea/ffffff?text=Temple+Run+2",
     "embedUrl": "https://templerun2.com/"
   },
   {
@@ -41,7 +41,7 @@
     "description": "Play the classic game of chess against the computer or challenge your friends. Improve your strategy and tactical thinking.",
     "category": "Strategy",
     "tags": ["chess", "strategy", "board", "classic"],
-    "thumbnail": "https://via.placeholder.com/300x200/00ffff/000000?text=Chess",
+    "thumbnail": "https://via.placeholder.com/300x200/764ba2/ffffff?text=Chess",
     "embedUrl": "https://www.chess.com/play/computer"
   },
   {
@@ -50,7 +50,7 @@
     "description": "Jump, fly, and flip your way through dangerous passages and spiky obstacles. Complete levels and unlock new characters.",
     "category": "Rhythm",
     "tags": ["rhythm", "platformer", "music", "challenging"],
-    "thumbnail": "https://via.placeholder.com/300x200/0080ff/000000?text=Geometry+Dash",
+    "thumbnail": "https://via.placeholder.com/300x200/f093fb/ffffff?text=Geometry+Dash",
     "embedUrl": "https://geometrydash.io/"
   },
   {
@@ -59,7 +59,7 @@
     "description": "Click cookies to bake more cookies, buy upgrades, and become the ultimate cookie empire. An idle game that's strangely addictive.",
     "category": "Idle",
     "tags": ["idle", "clicker", "incremental", "fun"],
-    "thumbnail": "https://via.placeholder.com/300x200/00ffff/000000?text=Cookie+Clicker",
+    "thumbnail": "https://via.placeholder.com/300x200/667eea/ffffff?text=Cookie+Clicker",
     "embedUrl": "https://orteil.dashnet.org/cookieclicker/"
   },
   {
@@ -68,7 +68,7 @@
     "description": "Run, jump, and dodge through subway tunnels while collecting coins and power-ups. Escape from the inspector and his dog.",
     "category": "Action",
     "tags": ["running", "adventure", "action", "mobile"],
-    "thumbnail": "https://via.placeholder.com/300x200/0080ff/000000?text=Subway+Surfers",
+    "thumbnail": "https://via.placeholder.com/300x200/764ba2/ffffff?text=Subway+Surfers",
     "embedUrl": "https://www.subwaysurfers.com/"
   },
   {
@@ -77,7 +77,7 @@
     "description": "Find hidden words in a grid of letters. Challenge yourself with different themes and difficulty levels.",
     "category": "Puzzle",
     "tags": ["word", "puzzle", "search", "vocabulary"],
-    "thumbnail": "https://via.placeholder.com/300x200/00ffff/000000?text=Word+Search",
+    "thumbnail": "https://via.placeholder.com/300x200/f093fb/ffffff?text=Word+Search",
     "embedUrl": "https://thewordsearch.com/"
   },
   {
@@ -86,7 +86,7 @@
     "description": "Speed through challenging tracks, drift around corners, and compete for the fastest lap times in this exciting racing game.",
     "category": "Racing",
     "tags": ["racing", "cars", "speed", "driving"],
-    "thumbnail": "https://via.placeholder.com/300x200/0080ff/000000?text=Racing+Game",
+    "thumbnail": "https://via.placeholder.com/300x200/667eea/ffffff?text=Racing+Game",
     "embedUrl": "https://www.crazygames.com/game/racing-game"
   },
   {
@@ -95,7 +95,7 @@
     "description": "Arrange falling blocks to create complete lines and clear the board. The classic puzzle game that never gets old.",
     "category": "Puzzle",
     "tags": ["tetris", "puzzle", "classic", "blocks"],
-    "thumbnail": "https://via.placeholder.com/300x200/00ffff/000000?text=Tetris",
+    "thumbnail": "https://via.placeholder.com/300x200/764ba2/ffffff?text=Tetris",
     "embedUrl": "https://tetris.com/play-tetris"
   },
   {
@@ -104,7 +104,7 @@
     "description": "Navigate through the maze, eat all the dots while avoiding the ghosts. The iconic arcade game that started it all.",
     "category": "Arcade",
     "tags": ["pacman", "arcade", "classic", "maze"],
-    "thumbnail": "https://via.placeholder.com/300x200/0080ff/000000?text=Pac-Man",
+    "thumbnail": "https://via.placeholder.com/300x200/f093fb/ffffff?text=Pac-Man",
     "embedUrl": "https://www.google.com/logos/2010/pacman10-i.html"
   }
 ]

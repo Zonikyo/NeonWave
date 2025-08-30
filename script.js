@@ -15,6 +15,7 @@ class WaterWallApp {
         this.setupEventListeners();
         this.renderHome();
         this.populateCategories();
+        this.setupGlassEffects();
     }
 
     async loadGames() {
@@ -38,7 +39,7 @@ class WaterWallApp {
                 description: "This is a sample game description for demonstration purposes.",
                 category: "Action",
                 tags: ["action", "adventure", "arcade"],
-                thumbnail: "https://via.placeholder.com/300x200/00ffff/000000?text=Game+1",
+                thumbnail: "https://via.placeholder.com/300x200/667eea/ffffff?text=Game+1",
                 embedUrl: "https://example.com/game1"
             },
             {
@@ -47,7 +48,7 @@ class WaterWallApp {
                 description: "Another sample game to show the grid layout and functionality.",
                 category: "Puzzle",
                 tags: ["puzzle", "strategy", "brain"],
-                thumbnail: "https://via.placeholder.com/300x200/0080ff/000000?text=Game+2",
+                thumbnail: "https://via.placeholder.com/300x200/764ba2/ffffff?text=Game+2",
                 embedUrl: "https://example.com/game2"
             },
             {
@@ -56,7 +57,7 @@ class WaterWallApp {
                 description: "A third sample game to demonstrate the responsive grid system.",
                 category: "Racing",
                 tags: ["racing", "speed", "cars"],
-                thumbnail: "https://via.placeholder.com/300x200/00ffff/000000?text=Game+3",
+                thumbnail: "https://via.placeholder.com/300x200/f093fb/ffffff?text=Game+3",
                 embedUrl: "https://example.com/game3"
             }
         ];
@@ -84,6 +85,63 @@ class WaterWallApp {
                 this.rateGame(parseInt(e.target.dataset.rating));
             }
         });
+
+        // Add glass effect on scroll
+        window.addEventListener('scroll', () => {
+            this.updateGlassEffects();
+        });
+    }
+
+    setupGlassEffects() {
+        // Add parallax effect to background
+        this.addParallaxEffect();
+        
+        // Add floating animation to cards
+        this.addFloatingAnimation();
+    }
+
+    addParallaxEffect() {
+        const cards = document.querySelectorAll('.game-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+    }
+
+    addFloatingAnimation() {
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-5px); }
+            }
+            
+            .game-card {
+                animation: float 6s ease-in-out infinite;
+            }
+            
+            .game-card:nth-child(even) {
+                animation-delay: 0.5s;
+            }
+            
+            .game-card:nth-child(3n) {
+                animation-delay: 1s;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    updateGlassEffects() {
+        const scrolled = window.pageYOffset;
+        const navbar = document.querySelector('.navbar');
+        
+        // Update navbar transparency based on scroll
+        if (scrolled > 100) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.15)';
+            navbar.style.backdropFilter = 'blur(25px)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.1)';
+            navbar.style.backdropFilter = 'blur(20px)';
+        }
     }
 
     filterGames() {
@@ -121,6 +179,25 @@ class WaterWallApp {
         this.hideView('gameView');
         document.getElementById('backButton').style.display = 'none';
         this.renderGamesGrid();
+        
+        // Add entrance animation
+        setTimeout(() => {
+            this.addEntranceAnimation();
+        }, 100);
+    }
+
+    addEntranceAnimation() {
+        const cards = document.querySelectorAll('.game-card');
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(50px) scale(0.8)';
+            
+            setTimeout(() => {
+                card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0) scale(1)';
+            }, index * 100);
+        });
     }
 
     renderGamesGrid() {
@@ -158,7 +235,30 @@ class WaterWallApp {
             this.openGame(game);
         });
         
+        // Add glass effect on hover
+        card.addEventListener('mouseenter', () => {
+            this.addGlassHoverEffect(card);
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            this.removeGlassHoverEffect(card);
+        });
+        
         return card;
+    }
+
+    addGlassHoverEffect(card) {
+        card.style.transform = 'translateY(-15px) scale(1.02)';
+        card.style.background = 'rgba(255, 255, 255, 0.2)';
+        card.style.borderColor = 'rgba(255, 255, 255, 0.5)';
+        card.style.boxShadow = '0 25px 80px rgba(0, 0, 0, 0.3)';
+    }
+
+    removeGlassHoverEffect(card) {
+        card.style.transform = 'translateY(0) scale(1)';
+        card.style.background = 'rgba(255, 255, 255, 0.1)';
+        card.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        card.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
     }
 
     openGame(game) {
@@ -194,8 +294,21 @@ class WaterWallApp {
         // Load ratings
         this.loadGameRatings(game.id);
         
-        // Smooth transition
+        // Smooth transition with glass effect
         document.getElementById('gameView').classList.add('fade-in');
+        this.addGamePageGlassEffect();
+    }
+
+    addGamePageGlassEffect() {
+        const gameContainer = document.querySelector('.game-container');
+        gameContainer.style.opacity = '0';
+        gameContainer.style.transform = 'translateY(30px)';
+        
+        setTimeout(() => {
+            gameContainer.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            gameContainer.style.opacity = '1';
+            gameContainer.style.transform = 'translateY(0)';
+        }, 200);
     }
 
     loadGameRatings(gameId) {
@@ -244,7 +357,7 @@ class WaterWallApp {
         // Update display
         this.loadGameRatings(gameId);
         
-        // Visual feedback
+        // Visual feedback with glass effect
         this.showRatingFeedback(rating);
     }
 
@@ -256,6 +369,12 @@ class WaterWallApp {
                 star.style.animation = 'none';
                 star.offsetHeight; // Trigger reflow
                 star.style.animation = 'fadeIn 0.3s ease-out';
+                
+                // Add glass glow effect
+                star.style.filter = 'drop-shadow(0 0 15px rgba(255, 215, 0, 0.8))';
+                setTimeout(() => {
+                    star.style.filter = 'none';
+                }, 1000);
             }
         });
     }
@@ -312,10 +431,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // Add some utility functions for smooth animations
 function addFadeInAnimation(element) {
     element.style.opacity = '0';
-    element.style.transform = 'translateY(20px)';
+    element.style.transform = 'translateY(30px)';
     
     setTimeout(() => {
-        element.style.transition = 'all 0.5s ease';
+        element.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         element.style.opacity = '1';
         element.style.transform = 'translateY(0)';
     }, 100);
@@ -339,4 +458,19 @@ function showLoading(element) {
 
 function hideLoading(element) {
     element.innerHTML = '';
+}
+
+// Add glass morphism utility functions
+function addGlassEffect(element) {
+    element.style.background = 'rgba(255, 255, 255, 0.1)';
+    element.style.backdropFilter = 'blur(20px)';
+    element.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+    element.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
+}
+
+function removeGlassEffect(element) {
+    element.style.background = '';
+    element.style.backdropFilter = '';
+    element.style.border = '';
+    element.style.boxShadow = '';
 }
